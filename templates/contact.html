@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative py-20 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="font-playfair text-5xl font-bold mb-6 animate-fade-in">Contact Us</h1>
+        <p class="text-xl max-w-3xl mx-auto animate-fade-in">
+            We're here to help you on your wellness journey. Reach out to us for bookings or any inquiries.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-playfair text-4xl font-bold mb-4 gradient-text">Get in Touch</h2>
+            <p class="text-gray-600 text-lg">We are open from 10 AM to 8 PM, Tuesday to Sunday.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="animate-fade-in">
+                <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-map-marker-alt text-3xl text-purple-600"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Our Address</h3>
+                <p class="text-gray-600">Vyapar Vihar Road<br>Bilaspur, Chhattisgarh</p>
+            </div>
+            
+            <div class="animate-fade-in">
+                <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-phone-alt text-3xl text-purple-600"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Call Us</h3>
+                <p class="text-gray-600">+91 12345 67890</p>
+            </div>
+            
+            <div class="animate-fade-in">
+                <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-envelope text-3xl text-purple-600"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Email Us</h3>
+                <p class="text-gray-600">contact@thevayu.com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Booking Form and Map -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Booking Form -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg animate-fade-in">
+                <h2 class="font-playfair text-3xl font-bold mb-6 gradient-text">Book Your Appointment</h2>
+                <form action="/booking" method="post">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="service" class="block text-gray-700 font-semibold mb-2">Select Service</label>
+                        <select id="service" name="service" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+                            <option value="massage">Massage Therapy</option>
+                            <option value="facial">Facial Treatment</option>
+                            <option value="hair">Hair Styling</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="date" class="block text-gray-700 font-semibold mb-2">Preferred Date</label>
+                        <input type="date" id="date" name="date" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Additional Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">
+                        Request Booking
+                    </button>
+                </form>
+            </div>
+
+            <!-- Map -->
+            <div class="relative rounded-2xl shadow-lg overflow-hidden animate-fade-in h-96 lg:h-full">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118147.81395988582!2d82.06739324322497!3d22.0722378374268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a280b186836a991%3A0xcd54fabaf4df5360!2sBilaspur%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1675000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

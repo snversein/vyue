@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative py-20 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="font-playfair text-5xl font-bold mb-6 animate-fade-in">Gallery</h1>
+        <p class="text-xl max-w-3xl mx-auto animate-fade-in">
+            Take a visual tour of our serene spa environment and premium facilities
+        </p>
+    </div>
+</section>
+
+<!-- Gallery Grid -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-playfair text-4xl font-bold mb-4 gradient-text">Our Spa & Facilities</h2>
+            <p class="text-gray-600 text-lg">Experience the tranquility and luxury of The Vayu</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Main Spa Area -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-2 animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="{{ url_for('static', filename='images/entrance.jpg') }}" 
+                         alt="Main Spa Area" 
+                         class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-2xl font-bold mb-1">Main Spa Area</h3>
+                            <p class="text-sm">Our tranquil main treatment space</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Massage Room -->
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-full">
+                    <img src="{{ url_for('static', filename='images/room1.jpg') }}" 
+                         alt="Private Massage Room" 
+                         class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold mb-1">Private Massage Room</h3>
+                            <p class="text-sm">Serene environment for relaxation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Reception Area -->
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="{{ url_for('static', filename='images/reception.jpg') }}" 
+                         alt="Reception Area" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Reception</h3>
+                            <p class="text-sm">Warm welcome awaits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Beauty Treatment Room -->
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="{{ url_for('static', filename='images/room2.jpg') }}" 
+                         alt="Beauty Treatment Room" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Beauty Treatment</h3>
+                            <p class="text-sm">Skincare and beauty services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Relaxation Lounge -->
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="{{ url_for('static', filename='images/budha.jpg') }}" 
+                         alt="Relaxation Lounge" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Relaxation Lounge</h3>
+                            <p class="text-sm">Post-treatment tranquility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- New Salon Image 1 -->
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="{{ url_for('static', filename='images/salo1.jpg') }}" 
+                         alt="Salon Treatment" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Salon Treatment</h3>
+                            <p class="text-sm">Professional beauty services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- New Salon Image 2 -->
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="{{ url_for('static', filename='images/salon2.jpg') }}" 
+                         alt="Salon Interior" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Salon Interior</h3>
+                            <p class="text-sm">Modern salon facilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- New Salon Image 3 -->
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="{{ url_for('static', filename='images/salon3.jpg') }}" 
+                         alt="Spa Therapy" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Spa Therapy</h3>
+                            <p class="text-sm">Relaxing spa treatments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services in Action -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-playfair text-4xl font-bold mb-4 gradient-text">Services in Action</h2>
+            <p class="text-gray-600 text-lg">See our expert therapists at work</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1519823551278-64a38e856a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Thai Massage" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Thai Massage</h3>
+                            <p class="text-sm">Ancient healing techniques</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Aroma Therapy" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Aroma Therapy</h3>
+                            <p class="text-sm">Essential oil treatments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="{{ url_for('static', filename='images/salo1.jpg') }}" 
+                         alt="Facial Treatment" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Facial Treatment</h3>
+                            <p class="text-sm">Rejuvenating skincare</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="{{ url_for('static', filename='images/salon2.jpg') }}" 
+                         alt="Hair Styling" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-lg font-bold">Hair Styling</h3>
+                            <p class="text-sm">Professional hair care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Experience -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-playfair text-4xl font-bold mb-4 gradient-text">Client Experience</h2>
+            <p class="text-gray-600 text-lg">Moments of relaxation and rejuvenation</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db6db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Relaxing Massage" 
+                         class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold mb-1">Deep Relaxation</h3>
+                            <p class="text-sm">Finding your inner peace</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1570125909232-2e40524b44b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Couples Massage" 
+                         class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold mb-1">Couples Retreat</h3>
+                            <p class="text-sm">Shared wellness experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="animate-fade-in">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1555166856-878469c5e8a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Spa Serenity" 
+                         class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold mb-1">Spa Serenity</h3>
+                            <p class="text-sm">Moments of pure bliss</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 hero-gradient text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="font-playfair text-4xl font-bold mb-6">Ready to Experience The Vayu?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Visit us and see why we're Bilaspur's preferred wellness destination
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/booking" class="bg-white text-purple-700 px-8 py-4 rounded-full font-semibold hover:bg-purple-50 transition-all duration-300 transform hover:scale-105">
+                Book Your Visit
+            </a>
+            <a href="/contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-700 transition-all duration-300">
+                Get Directions
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

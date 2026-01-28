@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative py-20 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="font-playfair text-5xl font-bold mb-6 animate-fade-in">Book Your Appointment</h1>
+        <p class="text-xl max-w-3xl mx-auto animate-fade-in">
+            Schedule your relaxing spa experience with us. Choose your preferred services and time slot.
+        </p>
+    </div>
+</section>
+
+<!-- Booking Form Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <form id="bookingForm" class="space-y-6">
+                    <!-- Personal Information -->
+                    <div class="border-b pb-6">
+                        <h2 class="font-playfair text-2xl font-bold mb-6 gradient-text">Personal Information</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">First Name *</label>
+                                <input type="text" name="firstName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300"
+                                       placeholder="Enter your first name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Last Name *</label>
+                                <input type="text" name="lastName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300"
+                                       placeholder="Enter your last name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                                <input type="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300"
+                                       placeholder="your.email@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Phone Number *</label>
+                                <input type="tel" name="phone" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300"
+                                       placeholder="+91 XXXXXXXXXX">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Selection -->
+                    <div class="border-b pb-6">
+                        <h2 class="font-playfair text-2xl font-bold mb-6 gradient-text">Select Services</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-purple-50 cursor-pointer transition-colors">
+                                <input type="checkbox" name="services" value="body-massage" class="mr-3 w-5 h-5 text-purple-600">
+                                <div>
+                                    <h3 class="font-semibold">Body Massage</h3>
+                                    <p class="text-sm text-gray-600">60 min - ₹1500</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-purple-50 cursor-pointer transition-colors">
+                                <input type="checkbox" name="services" value="thai-massage" class="mr-3 w-5 h-5 text-purple-600">
+                                <div>
+                                    <h3 class="font-semibold">Thai Massage</h3>
+                                    <p class="text-sm text-gray-600">90 min - ₹2000</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-purple-50 cursor-pointer transition-colors">
+                                <input type="checkbox" name="services" value="facial" class="mr-3 w-5 h-5 text-purple-600">
+                                <div>
+                                    <h3 class="font-semibold">Facial Treatment</h3>
+                                    <p class="text-sm text-gray-600">45 min - ₹1200</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-purple-50 cursor-pointer transition-colors">
+                                <input type="checkbox" name="services" value="hair-styling" class="mr-3 w-5 h-5 text-purple-600">
+                                <div>
+                                    <h3 class="font-semibold">Hair Styling</h3>
+                                    <p class="text-sm text-gray-600">60 min - ₹1000</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-purple-50 cursor-pointer transition-colors">
+                                <input type="checkbox" name="services" value="aroma-therapy" class="mr-3 w-5 h-5 text-purple-600">
+                                <div>
+                                    <h3 class="font-semibold">Aroma Therapy</h3>
+                                    <p class="text-sm text-gray-600">75 min - ₹1800</p>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-purple-50 cursor-pointer transition-colors">
+                                <input type="checkbox" name="services" value="manicure-pedicure" class="mr-3 w-5 h-5 text-purple-600">
+                                <div>
+                                    <h3 class="font-semibold">Manicure & Pedicure</h3>
+                                    <p class="text-sm text-gray-600">90 min - ₹1500</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Date and Time -->
+                    <div class="border-b pb-6">
+                        <h2 class="font-playfair text-2xl font-bold mb-6 gradient-text">Select Date & Time</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Preferred Date *</label>
+                                <input type="date" name="date" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Preferred Time *</label>
+                                <select name="time" required 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300">
+                                    <option value="">Select a time slot</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">01:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                    <option value="18:00">06:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div>
+                        <h2 class="font-playfair text-2xl font-bold mb-6 gradient-text">Additional Information</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Gender</label>
+                                <div class="flex space-x-4">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="gender" value="male" class="mr-2">
+                                        <span>Male</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="gender" value="female" class="mr-2">
+                                        <span>Female</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="gender" value="other" class="mr-2">
+                                        <span>Other</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Special Requests or Health Conditions</label>
+                                <textarea name="specialRequests" rows="4" 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-300"
+                                          placeholder="Please let us know about any allergies, health conditions, or special requests..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Submit -->
+                    <div class="border-t pt-6">
+                        <div class="mb-6">
+                            <label class="flex items-start">
+                                <input type="checkbox" name="terms" required class="mr-3 mt-1 w-5 h-5 text-purple-600">
+                                <span class="text-sm text-gray-600">
+                                    I agree to the terms and conditions and understand that my appointment is subject to availability. 
+                                    I will receive a confirmation call or message within 24 hours.
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button type="submit" 
+                                    class="flex-1 bg-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-calendar-check mr-2"></i>
+                                Book Appointment
+                            </button>
+                            <button type="button" onclick="window.location.href='/'"
+                                    class="flex-1 border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="font-playfair text-4xl font-bold mb-4 gradient-text">Need Help?</h2>
+            <p class="text-gray-600 text-lg">Feel free to contact us directly for immediate assistance</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-phone text-2xl text-purple-600"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Call Us</h3>
+                <p class="text-gray-600">+91 XXXXXXXXXX</p>
+                <p class="text-sm text-gray-500">Mon-Sun: 9:00 AM - 8:00 PM</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-envelope text-2xl text-purple-600"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Email Us</h3>
+                <p class="text-gray-600">info@thevayu.com</p>
+                <p class="text-sm text-gray-500">We'll respond within 24 hours</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-map-marker-alt text-2xl text-purple-600"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Visit Us</h3>
+                <p class="text-gray-600">Vyapar Vihar, Bilaspur</p>
+                <p class="text-sm text-gray-500">Beside Goomber Petrol Pump</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Modal (hidden by default) -->
+<div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+    <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center animate-fade-in">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-check text-3xl text-green-600"></i>
+        </div>
+        <h3 class="font-playfair text-2xl font-bold mb-4">Booking Successful!</h3>
+        <p class="text-gray-600 mb-6">
+            Thank you for booking with us. We will contact you within 24 hours to confirm your appointment.
+        </p>
+        <button onclick="closeModal()" 
+                class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-all duration-300">
+            Close
+        </button>
+    </div>
+</div>
+
+<script>
+    // Set minimum date to today
+    const dateInput = document.querySelector('input[name="date"]');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+
+    // Form submission
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => {
+            if (data[key]) {
+                if (!Array.isArray(data[key])) {
+                    data[key] = [data[key]];
+                }
+                data[key].push(value);
+            } else {
+                data[key] = value;
+            }
+        });
+        
+        // Show success modal
+        document.getElementById('successModal').classList.remove('hidden');
+        
+        // Log form data (in a real application, this would be sent to a server)
+        console.log('Booking Data:', data);
+        
+        // Reset form
+        this.reset();
+    });
+
+    // Close modal function
+    function closeModal() {
+        document.getElementById('successModal').classList.add('hidden');
+        // Redirect to home page
+        window.location.href = '/';
+    }
+
+    // Service selection validation
+    const form = document.getElementById('bookingForm');
+    form.addEventListener('submit', function(e) {
+        const services = document.querySelectorAll('input[name="services"]:checked');
+        if (services.length === 0) {
+            e.preventDefault();
+            alert('Please select at least one service');
+        }
+    });
+</script>
+{% endblock %}
